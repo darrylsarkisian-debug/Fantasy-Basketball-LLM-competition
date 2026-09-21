@@ -23,7 +23,7 @@ def _minutes(m):
     except Exception:
         return 0
 
-def fetch_candidates(days=10, min_games=3, min_mpg=20, top_n=12):
+def fetch_candidates(days=10, min_games=3, min_mpg=15, top_n=None):
     end = date.today()
     start = end - timedelta(days=days)
     rows, cursor = [], None
@@ -58,7 +58,7 @@ def fetch_candidates(days=10, min_games=3, min_mpg=20, top_n=12):
         score = per["pts"] + 1.2 * per["reb"] + 1.5 * per["ast"] + 3 * per["stl"] + 3 * per["blk"] - per["turnover"]
         out.append({"name": names[pid], "gp": int(gp), **per, "score": round(score, 1)})
     out.sort(key=lambda x: -x["score"])
-    return out[:top_n]
+    return out[:top_n] if top_n else out
 
 def mock_candidates():
     return [

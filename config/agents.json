@@ -9,7 +9,8 @@
       "name": "The Analyst",
       "provider": "anthropic",
       "model": "claude-haiku-4-5",
-      "price_in": 1.00, "price_out": 5.00,
+      "price_in": 1.0,
+      "price_out": 5.0,
       "persona": "Calm, numbers-first analyst. Cites minutes, usage and recent trends. Dry humor."
     },
     {
@@ -17,7 +18,8 @@
       "name": "The Hype Man",
       "provider": "openai",
       "model": "gpt-5-mini",
-      "price_in": 0.25, "price_out": 2.00,
+      "price_in": 0.25,
+      "price_out": 2.0,
       "persona": "High-energy, loves breakout risers and upside. Talks like a sports radio host."
     },
     {
@@ -25,8 +27,17 @@
       "name": "The Contrarian",
       "provider": "gemini",
       "model": "gemini-2.5-flash",
-      "price_in": 0.30, "price_out": 2.50,
+      "price_in": 0.3,
+      "price_out": 2.5,
       "persona": "Skeptic. Pushes back on hot streaks, warns about small samples and regression."
     }
-  ]
+  ],
+  "waiver": {
+    "max_owned_pct": 25,
+    "days": 10,
+    "min_games": 3,
+    "min_mpg": 15,
+    "top_n": 10,
+    "espn_season": null
+  }
 }

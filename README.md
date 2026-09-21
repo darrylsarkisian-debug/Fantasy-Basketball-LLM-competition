@@ -16,5 +16,7 @@ waiver-wire pickups every day at 3pm PT during the NBA season. Static site + sch
 
 ## Known gaps / to verify
 - Model IDs and prices in agents.json are placeholders.
-- balldontlie calls are untested against the live API; it has no roster-ownership data, so candidates = hot recent production, not truly "available" players.
+- balldontlie calls are untested against the live API.
+- Ownership comes from ESPN's unofficial no-login endpoint (`pipeline/ownership.py`); candidates are players under `waiver.max_owned_pct` (25%) in `config/agents.json`. If ESPN fails, the pipeline falls back to production-only and the site says so. Players ESPN can't name-match are listed in `latest.json` under `ownership.unmatched`; fix them in `config/name_aliases.json`.
+- Yahoo API access needs an approved application; not used for now.
 - Module 4 is a placeholder (Waiver Board table).

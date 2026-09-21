@@ -9,9 +9,9 @@ async function init() {
     const m = el("div"); m.append(el("strong", "", a.name), el("div", "meta", a.provider + " / " + a.model)); h.append(m);
     p.append(h, el("div", "", "")); p.lastChild.id = "log-" + a.id; box.append(p);
   });
-  const rows = D.candidates.map(c => `<tr><td>${c.name}</td><td>${c.gp}</td><td>${c.pts}</td><td>${c.reb}</td><td>${c.ast}</td><td>${c.stl}</td><td>${c.blk}</td><td>${c.score}</td></tr>`).join("");
-  document.getElementById("boardtable").innerHTML = "<table><tr><th>Player</th><th>GP</th><th>PTS</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>Score</th></tr>" + rows + "</table>";
-  document.getElementById("foot").textContent = "Debate for " + D.date + (D.mock ? " (mock data)" : "");
+  const rows = D.candidates.map(c => `<tr><td>${c.name}</td><td>${c.gp}</td><td>${c.pts}</td><td>${c.reb}</td><td>${c.ast}</td><td>${c.stl}</td><td>${c.blk}</td><td>${c.score}</td><td>${c.owned_pct ?? "-"}</td></tr>`).join("");
+  document.getElementById("boardtable").innerHTML = "<table><tr><th>Player</th><th>GP</th><th>PTS</th><th>REB</th><th>AST</th><th>STL</th><th>BLK</th><th>Score</th><th>% Owned (ESPN)</th></tr>" + rows + "</table>";
+  document.getElementById("foot").textContent = "Debate for " + D.date + (D.mock ? " (mock data)" : "") + (D.ownership && !D.ownership.available ? " - ownership data unavailable today" : "");
   document.getElementById("play").onclick = play;
   const now = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
   if (now.getHours() === 15 && now.getMinutes() < 5) play();
