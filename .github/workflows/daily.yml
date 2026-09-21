@@ -1,0 +1,26 @@
+name: daily-debate
+on:
+  schedule:
+    - cron: "0 20 * * *"   # 20:00 UTC = 12/1pm Pacific; generated ahead, site plays it at 3pm PT
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: python pipeline/run_daily.py
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - run: |
+          git config user.name "debate-bot"
+          git config user.email "debate-bot@users.noreply.github.com"
+          git add docs/data
+          git commit -m "Debate for $(date -u +%F)" || exit 0
+          git push

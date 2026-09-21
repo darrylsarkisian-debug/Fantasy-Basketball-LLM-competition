@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T19:14:01+00:00",
+  "agents": [
+    {
+      "id": "claude",
+      "name": "The Analyst",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5"
+    },
+    {
+      "id": "chatgpt",
+      "name": "The Hype Man",
+      "provider": "openai",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "gemini",
+      "name": "The Contrarian",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Sample Guard",
+      "gp": 6,
+      "min": 31.2,
+      "pts": 19.5,
+      "reb": 4.1,
+      "ast": 7.3,
+      "stl": 1.6,
+      "blk": 0.3,
+      "turnover": 2.4,
+      "fg3m": 2.8,
+      "score": 38.3
+    },
+    {
+      "name": "Sample Big",
+      "gp": 5,
+      "min": 27.8,
+      "pts": 12.0,
+      "reb": 10.2,
+      "ast": 2.1,
+      "stl": 0.8,
+      "blk": 2.2,
+      "turnover": 1.5,
+      "fg3m": 0.2,
+      "score": 34.6
+    },
+    {
+      "name": "Sample Wing",
+      "gp": 7,
+      "min": 29.5,
+      "pts": 16.8,
+      "reb": 5.5,
+      "ast": 3.0,
+      "stl": 1.4,
+      "blk": 0.6,
+      "turnover": 1.8,
+      "fg3m": 2.5,
+      "score": 31.9
+    }
+  ],
+  "lines": [
+    {
+      "agent": "claude",
+      "name": "The Analyst",
+      "text": "[mock line 1] Talking about Sample Guard."
+    },
+    {
+      "agent": "chatgpt",
+      "name": "The Hype Man",
+      "text": "[mock line 1] Talking about Sample Guard."
+    },
+    {
+      "agent": "gemini",
+      "name": "The Contrarian",
+      "text": "[mock line 1] Talking about Sample Guard."
+    },
+    {
+      "agent": "claude",
+      "name": "The Analyst",
+      "text": "[mock line 2] Talking about Sample Big."
+    },
+    {
+      "agent": "chatgpt",
+      "name": "The Hype Man",
+      "text": "[mock line 2] Talking about Sample Big."
+    },
+    {
+      "agent": "gemini",
+      "name": "The Contrarian",
+      "text": "[mock line 2] Talking about Sample Big."
+    },
+    {
+      "agent": "claude",
+      "name": "The Analyst",
+      "text": "[mock line 3] Talking about Sample Wing."
+    },
+    {
+      "agent": "chatgpt",
+      "name": "The Hype Man",
+      "text": "[mock line 3] Talking about Sample Wing."
+    },
+    {
+      "agent": "gemini",
+      "name": "The Contrarian",
+      "text": "[mock line 3] Talking about Sample Wing."
+    },
+    {
+      "agent": "claude",
+      "name": "The Analyst",
+      "text": "[mock line 4] Talking about Sample Guard."
+    },
+    {
+      "agent": "chatgpt",
+      "name": "The Hype Man",
+      "text": "[mock line 4] Talking about Sample Guard."
+    },
+    {
+      "agent": "gemini",
+      "name": "The Contrarian",
+      "text": "[mock line 4] Talking about Sample Guard."
+    }
+  ],
+  "cost_usd": {
+    "claude": 0.0,
+    "chatgpt": 0.0,
+    "gemini": 0.0
+  },
+  "usage": {
+    "claude": {
+      "in": 0,
+      "out": 0
+    },
+    "chatgpt": {
+      "in": 0,
+      "out": 0
+    },
+    "gemini": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  "mock": true
+}

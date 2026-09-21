@@ -1,0 +1,32 @@
+{
+  "daily_cap_usd_per_agent": 0.03,
+  "rounds": 4,
+  "max_words_per_turn": 45,
+  "_note": "Model IDs and prices are placeholders - verify against each provider's current docs before the season. Prices are USD per 1M tokens.",
+  "agents": [
+    {
+      "id": "claude",
+      "name": "The Analyst",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "price_in": 1.00, "price_out": 5.00,
+      "persona": "Calm, numbers-first analyst. Cites minutes, usage and recent trends. Dry humor."
+    },
+    {
+      "id": "chatgpt",
+      "name": "The Hype Man",
+      "provider": "openai",
+      "model": "gpt-5-mini",
+      "price_in": 0.25, "price_out": 2.00,
+      "persona": "High-energy, loves breakout risers and upside. Talks like a sports radio host."
+    },
+    {
+      "id": "gemini",
+      "name": "The Contrarian",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "price_in": 0.30, "price_out": 2.50,
+      "persona": "Skeptic. Pushes back on hot streaks, warns about small samples and regression."
+    }
+  ]
+}
